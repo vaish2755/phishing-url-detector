@@ -4,6 +4,9 @@ __pycache__/
 
 data/*.csv
 
+model.pkl
+feature_names.pkl
+
 .env
 .env.*
 
