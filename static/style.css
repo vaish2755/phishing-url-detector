@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        #07111f;
+
+    color: #f5f7fa;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+/* Background */
+
+.background-glow {
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(0, 180, 255, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    top: -200px;
+    left: -150px;
+
+    pointer-events: none;
+
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 70px 25px 40px;
+
+}
+
+
+/* Hero */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.shield {
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+    background: rgba(0, 180, 255, 0.1);
+
+    border: 1px solid rgba(0, 180, 255, 0.25);
+
+    border-radius: 22px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #48c9ff;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+
+}
+
+
+h1 span {
+
+    display: block;
+
+    color: #38bdf8;
+
+}
+
+
+.subtitle {
+
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    color: #91a1b5;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* Analyzer */
+
+.analyzer-card {
+
+    background: rgba(14, 28, 46, 0.85);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.analyzer-card label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #dce5ef;
+
+    margin-bottom: 12px;
+
+}
+
+
+.input-container {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+input {
+
+    flex: 1;
+
+    background: #091522;
+
+    border: 1px solid #26384d;
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+input:focus {
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 189, 248, 0.1);
+
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 0 27px;
+
+    background: #38bdf8;
+
+    color: #04111d;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    background: #67d3ff;
+
+    transform: translateY(-1px);
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+.input-hint {
+
+    color: #687b91;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+
+}
+
+
+/* Loading */
+
+.loading {
+
+    text-align: center;
+
+    margin: 35px 0;
+
+    color: #91a1b5;
+
+}
+
+
+.spinner {
+
+    width: 35px;
+    height: 35px;
+
+    margin: 0 auto 12px;
+
+    border: 3px solid #26384d;
+
+    border-top-color: #38bdf8;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* Result */
+
+.result-card {
+
+    margin-top: 30px;
+
+    background: #0d1c2d;
+
+    border: 1px solid #26384d;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+
+.result-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.result-label {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #71859b;
+
+    font-weight: 700;
+
+}
+
+
+.result-card h2 {
+
+    font-size: 35px;
+
+    margin: 8px 0 30px;
+
+}
+
+
+.probability-section {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: left;
+
+}
+
+
+.probability-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    color: #a9b7c7;
+
+}
+
+
+#probability {
+
+    color: #fff;
+
+    font-weight: 700;
+
+}
+
+
+.progress-bar {
+
+    height: 9px;
+
+    background: #1b2b3d;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #38bdf8;
+
+    border-radius: 20px;
+
+    transition: width 0.7s ease;
+
+}
+
+
+.result-message {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #a9b7c7;
+
+    line-height: 1.6;
+
+}
+
+
+.analyzed-url {
+
+    margin-top: 25px;
+
+    padding: 17px;
+
+    background: #091522;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+}
+
+
+.analyzed-url span {
+
+    font-size: 11px;
+
+    color: #687b91;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.analyzed-url p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    color: #dce5ef;
+
+    word-break: break-all;
+
+}
+
+
+/* Information cards */
+
+.info-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+}
+
+
+.info-card {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 23px;
+
+    background: rgba(14, 28, 46, 0.7);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 16px;
+
+}
+
+
+.info-icon {
+
+    font-size: 23px;
+
+}
+
+
+.info-card h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.info-card p {
+
+    color: #71859b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    color: #52667c;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* Utility */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .container {
+
+        padding-top: 45px;
+
+    }
+
+
+    h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .input-container {
+
+        flex-direction: column;
+
+    }
+
+
+    button {
+
+        padding: 16px;
+
+    }
+
+
+    .info-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing URL Detector</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+    <div class="background-glow"></div>
+
+
+    <main class="container">
+
+        <!-- Header -->
+
+        <section class="hero">
+
+            <div class="shield">
+                🛡️
+            </div>
+
+            <p class="badge">
+                MACHINE LEARNING SECURITY TOOL
+            </p>
+
+            <h1>
+                Phishing URL
+                <span>Detector</span>
+            </h1>
+
+            <p class="subtitle">
+                Analyze URL characteristics using a machine learning
+                model to identify patterns associated with phishing.
+            </p>
+
+        </section>
+
+
+        <!-- URL Analyzer -->
+
+        <section class="analyzer-card">
+
+            <label for="urlInput">
+                Enter a URL to analyze
+            </label>
+
+            <div class="input-container">
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com/login"
+                    autocomplete="off"
+                >
+
+                <button id="analyzeButton" onclick="analyzeURL()">
+                    Analyze URL
+                </button>
+
+            </div>
+
+            <p class="input-hint">
+                The URL is analyzed based on its structural and lexical characteristics.
+            </p>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>
+                Analyzing URL...
+            </p>
+
+        </div>
+
+
+        <!-- Result -->
+
+        <section id="resultCard" class="result-card hidden">
+
+            <div id="resultIcon" class="result-icon">
+                🛡️
+            </div>
+
+            <p class="result-label">
+                ANALYSIS RESULT
+            </p>
+
+            <h2 id="prediction">
+                —
+            </h2>
+
+            <div class="probability-section">
+
+                <div class="probability-header">
+
+                    <span>
+                        Phishing Probability
+                    </span>
+
+                    <span id="probability">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <p id="message" class="result-message">
+            </p>
+
+
+            <div class="analyzed-url">
+
+                <span>
+                    Analyzed URL
+                </span>
+
+                <p id="displayURL">
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Information -->
+
+        <section class="info-section">
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🔍
+                </div>
+
+                <div>
+
+                    <h3>
+                        URL Analysis
+                    </h3>
+
+                    <p>
+                        Examines URL-based features such as length,
+                        special characters, subdomains and suspicious keywords.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                    <p>
+                        Uses a trained Random Forest classification model
+                        to identify patterns in URLs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <h3>
+                        Privacy First
+                    </h3>
+
+                    <p>
+                        The application analyzes the URL string and
+                        does not visit or open the website.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Disclaimer -->
+
+        <footer>
+
+            <p>
+                ⚠️ This is a machine-learning based prediction.
+                It is not a definitive security verdict.
+            </p>
+
+            <p>
+                Built with Python • FastAPI • Scikit-learn
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
